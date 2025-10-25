@@ -61,7 +61,7 @@ def connect_to_gsheet():
             scopes=["https.www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"],
         )
         client = gspread.authorize(creds)
-        spreadsheet = client.open("roadtones-streamlit-userstudy-responses-2")
+        spreadsheet = client.open("roadtones-streamlit-userstudy-responses")
         return spreadsheet.sheet1
     except Exception:
         return None

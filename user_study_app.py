@@ -68,7 +68,7 @@ def connect_to_gsheet():
         )
         client = gspread.authorize(creds)
         spreadsheet = client.open("roadtones-streamlit-userstudy-responses")
-        st.success("Successfully connected to Google Sheet!") # Add success message
+        # st.success("Successfully connected to Google Sheet!") # Add success message
         return spreadsheet.sheet1
     except Exception as e:
         # --- MODIFIED: Show error message more clearly ---
@@ -100,12 +100,12 @@ def save_response(email, age, gender, video_data, caption_data, choice, study_ph
         'attempts_taken': 1 if study_phase == 'quiz' else 'N/A'
     }
 
-    st.info("Attempting to connect to Google Sheets...") # Add info message before connection attempt
+    # st.info("Attempting to connect to Google Sheets...") # Add info message before connection attempt
     worksheet = connect_to_gsheet() # This will now show CRITICAL ERROR if it fails
 
     if worksheet:
         try:
-            st.info("Appending row to Google Sheet...") # Info message before append
+            # st.info("Appending row to Google Sheet...") # Info message before append
             # Check if worksheet is empty to add header row
             header_needed = False
             try:
@@ -126,7 +126,7 @@ def save_response(email, age, gender, video_data, caption_data, choice, study_ph
                 worksheet.append_row(list(response_dict.keys())) # Add header row if empty
 
             worksheet.append_row(list(response_dict.values()))
-            st.success("Successfully saved to Google Sheets!") # Add success message
+            # st.success("Successfully saved to Google Sheets!") # Add success message
             return True
         except Exception as e:
             # --- MODIFIED: Show error instead of warning ---

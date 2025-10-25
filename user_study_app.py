@@ -37,7 +37,8 @@ JS_ANIMATION_RESET = """
         "Proceed to Question",
         "Proceed to Caption(s)",
         "Show Questions",
-        "Next Question"
+        "Next Question",
+        "Finish Quiz"
     ];
     const allButtons = window.parent.document.querySelectorAll('div[data-testid="stButton"] > button');
     allButtons.forEach(btn => {
@@ -57,10 +58,10 @@ def connect_to_gsheet():
     try:
         creds = Credentials.from_service_account_info(
             st.secrets["gcp_service_account"],
-            scopes=["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"],
+            scopes=["https.www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"],
         )
         client = gspread.authorize(creds)
-        spreadsheet = client.open("roadtones-streamlit-userstudy-responses-2")
+        spreadsheet = client.open("roadtones-streamlit-userstudy-responses")
         return spreadsheet.sheet1
     except Exception:
         return None
@@ -415,6 +416,11 @@ def render_comprehension_quiz(sample, view_state_key, proceed_step):
         unique_key = f"proceed_to_captions_{sample.get('sample_id', 'unknown')}"
         if st.button("Proceed to Caption(s)", key=unique_key):
             st.session_state[view_state_key]['step'] = proceed_step
+            # --- ADDED: Mark video as watched ---
+            video_id = sample.get('video_id')
+            if video_id:
+                st.session_state.comprehension_passed_video_ids.add(video_id)
+            # --- END ADDED ---
             st.rerun()
         # --- ADDED LINE ---
         streamlit_js_eval(js_expressions=JS_ANIMATION_RESET, key=f"anim_reset_comp_{sample.get('sample_id', 'unknown')}")
@@ -448,6 +454,7 @@ if 'page' not in st.session_state:
     st.session_state.current_caption_index = 0
     st.session_state.current_comparison_index = 0
     st.session_state.current_change_index = 0
+    st.session_state.comprehension_passed_video_ids = set() # --- ADDED ---
     st.session_state.all_data = load_data() # Load data once at the start
 
 if st.session_state.all_data is None:
@@ -795,7 +802,24 @@ elif st.session_state.page == 'quiz':
                         st.markdown(f'<div class="feedback-option {css_class}">{display_text}</div>', unsafe_allow_html=True)
 
                     st.info(f"**Explanation:** {question_data['explanation']}")
-                    st.button("Next Question", key=f"quiz_next_q_{sample_id}_{st.session_state.current_rating_question_index}", on_click=handle_next_quiz_question, args=(view_state_key,)) # Unique key per question
+
+                    # --- MODIFICATION: Check if it's the last question ---
+                    is_last_part = st.session_state.current_part_index == (len(part_keys) - 1)
+                    is_last_sample_in_part = st.session_state.current_sample_index == (len(questions_for_part) - 1)
+                    
+                    is_last_question = False
+                    if "Caption Quality" in current_part_key:
+                        is_last_sub_question = st.session_state.current_rating_question_index == (len(sample["questions"]) - 1)
+                        if is_last_part and is_last_sample_in_part and is_last_sub_question:
+                            is_last_question = True
+                    else:
+                        if is_last_part and is_last_sample_in_part:
+                            is_last_question = True
+
+                    button_text = "Finish Quiz" if is_last_question else "Next Question"
+                    # --- END MODIFICATION ---
+
+                    st.button(button_text, key=f"quiz_next_q_{sample_id}_{st.session_state.current_rating_question_index}", on_click=handle_next_quiz_question, args=(view_state_key,)) # Unique key per question
                     # --- ADDED LINE ---
                     streamlit_js_eval(js_expressions=JS_ANIMATION_RESET, key=f"anim_reset_quiz_next_{sample_id}")
                     # --- END ADDED LINE ---
@@ -920,8 +944,13 @@ elif st.session_state.page == 'user_study_main':
         current_video = all_videos[video_idx]
         video_id = current_video['video_id']
         timer_finished_key = f"timer_finished_{video_id}"
+        # --- ADDED ---
+        has_been_watched = video_id in st.session_state.comprehension_passed_video_ids
+        # --- END ADDED ---
 
-        if not st.session_state.get(timer_finished_key, False) and caption_idx == 0:
+        # --- MODIFIED: Added 'and not has_been_watched' ---
+        if not st.session_state.get(timer_finished_key, False) and caption_idx == 0 and not has_been_watched:
+        # --- END MODIFIED ---
             st.subheader("Watch the video")
             with st.spinner(""):
                 main_col, _ = st.columns([1, 1.8])
@@ -944,8 +973,16 @@ elif st.session_state.page == 'user_study_main':
 
             if view_state_key not in st.session_state:
                 initial_step = 5 if caption_idx > 0 else 1
+                # --- ADDED: Skip logic ---
+                if has_been_watched and caption_idx == 0:
+                    initial_step = 5 # Skip to showing captions
+                    st.session_state[summary_typed_key] = True # Mark summary as "typed"
+                # --- END ADDED ---
                 st.session_state[view_state_key] = {'step': initial_step, 'interacted': {qid: False for qid in question_ids}, 'comp_feedback': False, 'comp_choice': None}
-                if caption_idx == 0: st.session_state[summary_typed_key] = False
+                # --- MODIFIED: Only set to false if not watched ---
+                if caption_idx == 0 and not has_been_watched: 
+                    st.session_state[summary_typed_key] = False
+                # --- END MODIFIED ---
 
             current_step = st.session_state[view_state_key]['step']
 
@@ -1119,10 +1156,16 @@ elif st.session_state.page == 'user_study_main':
         # --- End Progression update ---
 
         current_change = all_changes[change_idx]; change_id = current_change['change_id']
+        video_id = current_change.get('video_id') # --- ADDED ---
         field_to_change = current_change['field_to_change']; field_type = list(field_to_change.keys())[0]
         timer_finished_key = f"timer_finished_{change_id}" # Keep timer key based on unique change_id
+        # --- ADDED ---
+        has_been_watched = video_id in st.session_state.comprehension_passed_video_ids
+        # --- END ADDED ---
 
-        if not st.session_state.get(timer_finished_key, False):
+        # --- MODIFIED: Added 'and not has_been_watched' ---
+        if not st.session_state.get(timer_finished_key, False) and not has_been_watched:
+        # --- END MODIFIED ---
             st.subheader("Watch the video")
             with st.spinner(""):
                 main_col, _ = st.columns([1, 1.8])
@@ -1140,7 +1183,17 @@ elif st.session_state.page == 'user_study_main':
             # --- State keys use 'p2' now ---
             view_state_key = f"view_state_p2_{change_id}"; summary_typed_key = f"summary_typed_p2_{change_id}"
             if view_state_key not in st.session_state:
-                st.session_state[view_state_key] = {'step': 1, 'summary_typed': False, 'comp_feedback': False, 'comp_choice': None}
+                # --- ADDED: Skip logic ---
+                initial_step = 1
+                if has_been_watched:
+                    initial_step = 5 # Skip to showing captions
+                    st.session_state[summary_typed_key] = True
+                # --- END ADDED ---
+                st.session_state[view_state_key] = {'step': initial_step, 'summary_typed': False, 'comp_feedback': False, 'comp_choice': None}
+                # --- ADDED ---
+                if not has_been_watched:
+                    st.session_state[summary_typed_key] = False
+                # --- END ADDED ---
             current_step = st.session_state[view_state_key]['step']
 
             title_col1, title_col2 = st.columns([1, 1.8])
@@ -1261,9 +1314,15 @@ elif st.session_state.page == 'user_study_main':
         # --- End Progression update ---
 
         current_comp = all_comparisons[comp_idx]; comparison_id = current_comp['comparison_id']
+        video_id = current_comp.get('video_id') # --- ADDED ---
         timer_finished_key = f"timer_finished_{comparison_id}" # Keep timer key based on unique comparison_id
+        # --- ADDED ---
+        has_been_watched = video_id in st.session_state.comprehension_passed_video_ids
+        # --- END ADDED ---
 
-        if not st.session_state.get(timer_finished_key, False):
+        # --- MODIFIED: Added 'and not has_been_watched' ---
+        if not st.session_state.get(timer_finished_key, False) and not has_been_watched:
+        # --- END MODIFIED ---
             st.subheader("Watch the video")
             with st.spinner(""):
                 main_col, _ = st.columns([1, 1.8])
@@ -1285,8 +1344,17 @@ elif st.session_state.page == 'user_study_main':
             question_ids = [q['id'] for q in q_templates]
 
             if view_state_key not in st.session_state:
-                st.session_state[view_state_key] = {'step': 1, 'interacted': {qid: False for qid in question_ids}, 'comp_feedback': False, 'comp_choice': None}
-                st.session_state[summary_typed_key] = False
+                # --- ADDED: Skip logic ---
+                initial_step = 1
+                if has_been_watched:
+                    initial_step = 5 # Skip to showing captions
+                    st.session_state[summary_typed_key] = True
+                # --- END ADDED ---
+                st.session_state[view_state_key] = {'step': initial_step, 'interacted': {qid: False for qid in question_ids}, 'comp_feedback': False, 'comp_choice': None}
+                # --- ADDED ---
+                if not has_been_watched:
+                    st.session_state[summary_typed_key] = False
+                # --- END ADDED ---
 
             current_step = st.session_state[view_state_key]['step']
 
@@ -1454,7 +1522,7 @@ parent_document.addEventListener('keyup', function(event) {
         event.preventDefault();
         const targetButtonLabels = [
             "Submit Ratings", "Submit Comparison", "Submit Answers",
-            "Submit Answer", "Next Question", "Show Questions",
+            "Submit Answer", "Next Question", "Show Questions", "Finish Quiz",
             "Proceed to Caption(s)", "Proceed to Captions", "Proceed to Caption",
             "Proceed to Summary", "Proceed to Question", "Proceed to User Study",
             "Take Quiz Again", "Submit", "Next >>", "Start Quiz >>", "Next" // Added "Start Quiz >>"

@@ -11,6 +11,7 @@ import gspread
 import random
 from google.oauth2.service_account import Credentials
 from streamlit_js_eval import streamlit_js_eval
+import traceback # Import traceback
 
 # --- Configuration ---
 INTRO_VIDEO_PATH = "media/start_video_slower.mp4"
@@ -52,19 +53,30 @@ JS_ANIMATION_RESET = """
 """
 
 # --- GOOGLE SHEETS & HELPERS ---
-@st.cache_resource
+# @st.cache_resource # Temporarily removed for debugging
 def connect_to_gsheet():
     """Connects to the Google Sheet using Streamlit secrets."""
     try:
+        # --- DEBUG: Verify secret is loaded (REMOVE AFTER TESTING) ---
+        # st.write("Attempting to load secrets...")
+        # st.json(st.secrets["gcp_service_account"]) # Use st.json for better formatting
+        # --- END DEBUG ---
+
         creds = Credentials.from_service_account_info(
             st.secrets["gcp_service_account"],
-            scopes=["https.www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"],
+            scopes=["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"],
         )
         client = gspread.authorize(creds)
         spreadsheet = client.open("roadtones-streamlit-userstudy-responses")
+        st.success("Successfully connected to Google Sheet!") # Add success message
         return spreadsheet.sheet1
-    except Exception:
+    except Exception as e:
+        # --- MODIFIED: Show error message more clearly ---
+        st.error(f"CRITICAL ERROR in connect_to_gsheet: {e}")
+        st.error(traceback.format_exc()) # Print the full traceback
+        # --- END MODIFIED ---
         return None
+
 
 def save_response_locally(response_dict):
     """Saves a response dictionary to a local JSONL file as a fallback."""
@@ -88,21 +100,44 @@ def save_response(email, age, gender, video_data, caption_data, choice, study_ph
         'attempts_taken': 1 if study_phase == 'quiz' else 'N/A'
     }
 
-    worksheet = connect_to_gsheet()
+    st.info("Attempting to connect to Google Sheets...") # Add info message before connection attempt
+    worksheet = connect_to_gsheet() # This will now show CRITICAL ERROR if it fails
+
     if worksheet:
         try:
+            st.info("Appending row to Google Sheet...") # Info message before append
             # Check if worksheet is empty to add header row
-            if not worksheet.get_all_values():
-                 worksheet.append_row(list(response_dict.keys())) # Add header row if empty
+            header_needed = False
+            try:
+                # Use a more robust check for emptiness, get_all_values can fail on empty sheets sometimes
+                cell_list = worksheet.range('A1:A1')
+                if not cell_list[0].value:
+                    header_needed = True
+            except gspread.exceptions.APIError as api_error:
+                 # Handle potential API errors when checking emptiness, maybe permissions?
+                 st.error(f"API Error checking sheet emptiness: {api_error}")
+                 header_needed = True # Assume header is needed if check fails, might duplicate header
+            except Exception as check_err:
+                 st.error(f"Error checking sheet emptiness: {check_err}")
+                 header_needed = True # Assume header needed
+
+            if header_needed:
+                st.info("Sheet appears empty, adding header row.")
+                worksheet.append_row(list(response_dict.keys())) # Add header row if empty
+
             worksheet.append_row(list(response_dict.values()))
+            st.success("Successfully saved to Google Sheets!") # Add success message
             return True
         except Exception as e:
-            st.warning(f"Could not save to Google Sheets ({e}). Saving a local backup.")
+            # --- MODIFIED: Show error instead of warning ---
+            st.error(f"CRITICAL ERROR appending to Google Sheets: {e}. Saving a local backup.")
+            st.error(traceback.format_exc()) # Print the full traceback for append error
+            # --- END MODIFIED ---
             return save_response_locally(response_dict)
     else:
-        st.warning("Could not connect to Google Sheets. Saving a local backup.")
+        # Error is already shown in connect_to_gsheet if connection failed
+        st.error("Connection to Google Sheets failed (see error above). Saving a local backup.")
         return save_response_locally(response_dict)
-
 
 @st.cache_data
 def get_video_metadata(path):
@@ -806,7 +841,7 @@ elif st.session_state.page == 'quiz':
                     # --- MODIFICATION: Check if it's the last question ---
                     is_last_part = st.session_state.current_part_index == (len(part_keys) - 1)
                     is_last_sample_in_part = st.session_state.current_sample_index == (len(questions_for_part) - 1)
-                    
+
                     is_last_question = False
                     if "Caption Quality" in current_part_key:
                         is_last_sub_question = st.session_state.current_rating_question_index == (len(sample["questions"]) - 1)
@@ -980,7 +1015,7 @@ elif st.session_state.page == 'user_study_main':
                 # --- END ADDED ---
                 st.session_state[view_state_key] = {'step': initial_step, 'interacted': {qid: False for qid in question_ids}, 'comp_feedback': False, 'comp_choice': None}
                 # --- MODIFIED: Only set to false if not watched ---
-                if caption_idx == 0 and not has_been_watched: 
+                if caption_idx == 0 and not has_been_watched:
                     st.session_state[summary_typed_key] = False
                 # --- END MODIFIED ---
 

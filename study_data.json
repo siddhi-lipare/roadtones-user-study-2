@@ -57,7 +57,7 @@
     {
       "video_id": "video_1774263154723451187",
       "video_path": "media/v_1774263154723451187_QFMMJd8wYMEMl2r7.mp4",
-      "video_summary": "A daytime near-miss incident involving dangerous driving behavior was captured by a vehicle-mounted camera in Osaka, Japan. The key road event involved the camera vehicle and a right-turning vehicle. The right-turning vehicle made a sudden and dangerous right turn, nearly colliding with the camera vehicle. This maneuver was likely due to the driver of the right-turning vehicle not paying attention or being impatient, resulting in a failure to yield right-of-way. The incident could have been avoided if the right-turning vehicle had waited for a clear opportunity to turn and checked for oncoming traffic.",
+      "video_summary": "A daytime near-miss incident involving dangerous driving behavior was captured by a vehicle-mounted camera in Osaka, Japan. The key road event involved the camera vehicle and a right-turning vehicle. The right-turning vehicle made a sudden and dangerous right turn, nearly colliding with the camera vehicle. This maneuver was likely due to the driver of the right-turning vehicle not paying attention or being in a rush, resulting in a failure to yield right-of-way. The incident could have been avoided if the right-turning vehicle had waited for a clear opportunity to turn and checked for oncoming traffic.",
       "road_event_answer": "A vehicle makes a sudden, dangerous right turn, failing to yield and nearly colliding with the camera vehicle.",
       "distractor_answers": [
         "A motorcyclist performs high-speed wheelies on a busy road with other vehicles.",
@@ -105,13 +105,13 @@
               "Conversational": "Very Strong"
             }
           },
-          "application": "Driver Sentiment Post"
+          "application": "Community Awareness Post"
         }
       ]
     }
   ],
   "part3_comparisons": [
-        {
+    {
       "comparison_id": "comp_005",
       "video_id": "video_1798581666879086946",
       "video_path": "media/v_1798581666879086946_iMCA3kCEctYBK5Uc.mp4",
@@ -133,7 +133,7 @@
       },
       "caption_A": "Have you ever seen roads like this in Gachibowli or Abdullahpurmet? \ud83d\udea6 What goes on here? #Hyderabad",
       "caption_B": "Have you ever seen roads like this in Gachibowli or Abdullahpurmet? \ud83d\udea6 What goes on here? #Hyderabad",
-      "application": "Community Discussion"
+      "application": "Community Awareness Post"
     },
     {
       "comparison_id": "comp_006",
@@ -203,7 +203,7 @@
       "change_type": "increased",
       "application": "Public Safety Awareness"
     },
-        {
+    {
       "change_id": "change_007",
       "video_id": "video_1290909686519091201",
       "video_path": "media/v_1290909686519091201_9vmNpHDC5937f9MW.mp4",
@@ -258,7 +258,7 @@
         "writing_style": "Exaggeration"
       },
       "change_type": "increased",
-      "application": "Road Safety Education"
+      "application": "Community Awareness Post"
     }
   ]
 }

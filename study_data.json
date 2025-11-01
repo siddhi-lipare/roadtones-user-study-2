@@ -110,79 +110,6 @@
       ]
     }
   ],
-  "part3_comparisons": [
-    {
-      "comparison_id": "comp_005",
-      "video_id": "video_1798581666879086946",
-      "video_path": "media/v_1798581666879086946_iMCA3kCEctYBK5Uc.mp4",
-      "video_summary": "The video, captured by multiple cameras including surveillance and indoor types, depicts key road events involving unsafe driving behavior, improper U-turns, and various traffic violations in Hyderabad, India, specifically in areas like Gachibowli and Abdullahpurmet. These events occurred during both daytime and nighttime. The road entities involved include cars, motorcycles, buses, and pedestrians, interacting with U-turns, traffic signals, road dividers, and zebra crossings. Actions observed include improper U-turns, overtaking, speeding, wrong-side driving, and red light jumping. The depicted traffic rule violations encompass improper U-turns, wrong-side driving, red light jumping, speeding, lane discipline violations, and helmet rule violations.",
-      "road_event_answer": "A compilation shows multiple traffic violations in Hyderabad, including improper U-turns, speeding, and red light jumping.",
-      "distractor_answers": [
-        "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",
-        "A large truck performs a hazardous overtaking maneuver, ignoring oncoming traffic.",
-        "A motorcyclist, approaching at high speed, performs a tactical roll to avoid colliding with a turning truck."
-      ],
-      "control_scores": {
-        "tone": {
-          "Curious": "Very Strong",
-          "Questioning": "Strong"
-        },
-        "writing_style": {
-          "Conversational": "Strong"
-        }
-      },
-      "caption_A": "Have you ever seen roads like this in Gachibowli or Abdullahpurmet? \ud83d\udea6 What goes on here? #Hyderabad",
-      "caption_B": "Have you ever seen roads like this in Gachibowli or Abdullahpurmet? \ud83d\udea6 What goes on here? #Hyderabad",
-      "application": "Community Awareness Post"
-    },
-    {
-      "comparison_id": "comp_006",
-      "video_id": "video_1724793343144837589",
-      "video_path": "media/v_1724793343144837589_-Jno5Mt1kFvHGx4N.mp4",
-      "video_summary": "A near-miss incident occurred at night near Marathahalli, India, captured by a 4K dashcam. A car, driving straight with the right of way, was almost collided with by a motorcycle. The motorcyclist failed to yield to the car, stopping at the last moment, which constituted a traffic rule violation. It was suggested that the biker might have been rushing to meet delivery targets. The incident could have been avoided if the biker had yielded and both parties had practiced defensive driving.",
-      "road_event_answer": "A motorcyclist fails to yield and nearly collides with a car at an intersection.",
-      "distractor_answers": [
-        "A high-speed car crash on a highway results in a severely damaged vehicle, multiple fatalities, and injuries.",
-        "A large truck performs a hazardous overtaking maneuver, ignoring oncoming traffic.",
-        "A motorcyclist performs a stunt by standing on the seat of their moving motorcycle."
-      ],
-      "control_scores": {
-        "tone": {
-          "Humorous": "Very Strong",
-          "Sarcastic": "Strong"
-        },
-        "writing_style": {
-          "Pop Culture References": "Strong"
-        }
-      },
-      "caption_A": "@BlrCityPolice Marathahalli got its own Fast & Furious last night\u2014biker\u2019s need for speed almost turned car into a bumper sticker.",
-      "caption_B": "@BlrCityPolice Marathahalli got its own Fast & Furious last night\u2014biker\u2019s need for speed almost turned car into a bumper sticker.",
-      "application": "Law Enforcement Reporting"
-    },
-    {
-      "comparison_id": "comp_008",
-      "video_id": "video_1666322163429679105",
-      "video_path": "media/v_1666322163429679105_JVN7GXcomAkqW4_8.mp4",
-      "video_summary": "A massive multiple vehicle crash, involving numerous vehicles including large trucks, cars (such as white cars and a red hatchback), and a police car, occurred on the N12 highway near the Delmas off-ramp in South Africa. The incident took place during the morning or early hours, with poor visibility due to heavy fog identified as the primary cause. Vehicles were observed driving slowly, stopping, or parked, with some trucks illuminating their brake lights. People in high-visibility vests were present, inspecting or interacting with the vehicles. The event was captured by a vehicle-mounted camera, showing perspectives from inside a vehicle and focusing on side mirrors.",
-      "road_event_answer": "A massive multi-vehicle pileup on a highway caused by heavy fog.",
-      "distractor_answers": [
-        "Multiple vehicles run a red light and make illegal U-turns while pedestrians are crossing against their signal.",
-        "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",
-        "A motorcyclist performs a stunt by standing on the seat of their moving motorcycle."
-      ],
-      "control_scores": {
-        "tone": {
-          "Calm": "Very Strong"
-        },
-        "writing_style": {
-          "Factual": "Very Strong"
-        }
-      },
-      "caption_A": "Morning fog leads to a multi-vehicle crash on N12 near Delmas. \ud83d\udea8 #SouthAfrica",
-      "caption_B": "Morning fog leads to a multi-vehicle crash on N12 near Delmas. \ud83d\udea8 #SouthAfrica",
-      "application": "Public Safety Awareness"
-    }
-  ],
   "part2_intensity_change": [
     {
       "change_id": "change_001",
@@ -259,6 +186,79 @@
       },
       "change_type": "increased",
       "application": "Community Awareness Post"
+    }
+  ],
+  "part3_comparisons": [
+    {
+      "comparison_id": "comp_005",
+      "video_id": "video_1798581666879086946",
+      "video_path": "media/v_1798581666879086946_iMCA3kCEctYBK5Uc.mp4",
+      "video_summary": "The video, captured by multiple cameras including surveillance and indoor types, depicts key road events involving unsafe driving behavior, improper U-turns, and various traffic violations in Hyderabad, India, specifically in areas like Gachibowli and Abdullahpurmet. These events occurred during both daytime and nighttime. The road entities involved include cars, motorcycles, buses, and pedestrians, interacting with U-turns, traffic signals, road dividers, and zebra crossings. Actions observed include improper U-turns, overtaking, speeding, wrong-side driving, and red light jumping. The depicted traffic rule violations encompass improper U-turns, wrong-side driving, red light jumping, speeding, lane discipline violations, and helmet rule violations.",
+      "road_event_answer": "A compilation shows multiple traffic violations in Hyderabad, including improper U-turns, speeding, and red light jumping.",
+      "distractor_answers": [
+        "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",
+        "A large truck performs a hazardous overtaking maneuver, ignoring oncoming traffic.",
+        "A motorcyclist, approaching at high speed, performs a tactical roll to avoid colliding with a turning truck."
+      ],
+      "control_scores": {
+        "tone": {
+          "Curious": "Very Strong",
+          "Questioning": "Strong"
+        },
+        "writing_style": {
+          "Conversational": "Strong"
+        }
+      },
+      "caption_A": "Have you ever seen roads like this in Gachibowli or Abdullahpurmet? \ud83d\udea6 What goes on here? #Hyderabad",
+      "caption_B": "Have you ever seen roads like this in Gachibowli or Abdullahpurmet? \ud83d\udea6 What goes on here? #Hyderabad",
+      "application": "Community Awareness Post"
+    },
+    {
+      "comparison_id": "comp_006",
+      "video_id": "video_1724793343144837589",
+      "video_path": "media/v_1724793343144837589_-Jno5Mt1kFvHGx4N.mp4",
+      "video_summary": "A near-miss incident occurred at night near Marathahalli, India, captured by a 4K dashcam. A car, driving straight with the right of way, was almost collided with by a motorcycle. The motorcyclist failed to yield to the car, stopping at the last moment, which constituted a traffic rule violation. It was suggested that the biker might have been rushing to meet delivery targets. The incident could have been avoided if the biker had yielded and both parties had practiced defensive driving.",
+      "road_event_answer": "A motorcyclist fails to yield and nearly collides with a car at an intersection.",
+      "distractor_answers": [
+        "A high-speed car crash on a highway results in a severely damaged vehicle, multiple fatalities, and injuries.",
+        "A large truck performs a hazardous overtaking maneuver, ignoring oncoming traffic.",
+        "A motorcyclist performs a stunt by standing on the seat of their moving motorcycle."
+      ],
+      "control_scores": {
+        "tone": {
+          "Humorous": "Very Strong",
+          "Sarcastic": "Strong"
+        },
+        "writing_style": {
+          "Pop Culture References": "Strong"
+        }
+      },
+      "caption_A": "@BlrCityPolice Marathahalli got its own Fast & Furious last night\u2014biker\u2019s need for speed almost turned car into a bumper sticker.",
+      "caption_B": "@BlrCityPolice Marathahalli got its own Fast & Furious last night\u2014biker\u2019s need for speed almost turned car into a bumper sticker.",
+      "application": "Law Enforcement Reporting"
+    },
+    {
+      "comparison_id": "comp_008",
+      "video_id": "video_1666322163429679105",
+      "video_path": "media/v_1666322163429679105_JVN7GXcomAkqW4_8.mp4",
+      "video_summary": "A massive multiple vehicle crash, involving numerous vehicles including large trucks, cars (such as white cars and a red hatchback), and a police car, occurred on the N12 highway near the Delmas off-ramp in South Africa. The incident took place during the morning or early hours, with poor visibility due to heavy fog identified as the primary cause. Vehicles were observed driving slowly, stopping, or parked, with some trucks illuminating their brake lights. People in high-visibility vests were present, inspecting or interacting with the vehicles. The event was captured by a vehicle-mounted camera, showing perspectives from inside a vehicle and focusing on side mirrors.",
+      "road_event_answer": "A massive multi-vehicle pileup on a highway caused by heavy fog.",
+      "distractor_answers": [
+        "Multiple vehicles run a red light and make illegal U-turns while pedestrians are crossing against their signal.",
+        "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",
+        "A motorcyclist performs a stunt by standing on the seat of their moving motorcycle."
+      ],
+      "control_scores": {
+        "tone": {
+          "Calm": "Very Strong"
+        },
+        "writing_style": {
+          "Factual": "Very Strong"
+        }
+      },
+      "caption_A": "Morning fog leads to a multi-vehicle crash on N12 near Delmas. \ud83d\udea8 #SouthAfrica",
+      "caption_B": "Morning fog leads to a multi-vehicle crash on N12 near Delmas. \ud83d\udea8 #SouthAfrica",
+      "application": "Public Safety Awareness"
     }
   ]
 }

@@ -1,165 +1,128 @@
 {
-  "part1_questions": [
+  "Part 1: Tone Identification": [
     {
-      "id": "tone_relevance",
-      "text": "How {} does the caption sound?"
-    },
-    {
-      "id": "style_relevance",
-      "default_text": "How {} is the caption's style?",
-      "default_options": [
-        "Not at all",
-        "Weak",
-        "Moderate",
-        "Strong",
-        "Very Strong"
+      "sample_id": "identify_001",
+      "video_path": "media/v_770719942027145220__IBpd70dJt7nNSop.mp4",
+      "video_summary": "A dangerous driving near-miss incident was captured by a Cycliq Fly6 bike-mounted camera in the United Kingdom, specifically at the Five Ways island near Honiley and Shrewley. The key event involved a vehicle, likely a car, performing a maneuver at a roundabout without proper indication, nearly causing a collision with a cyclist. The driver was potentially unaware of the cyclist and the potential danger. This incident constituted a traffic rule violation due to the failure to use proper indicators at a roundabout and could have been prevented if the driver had used appropriate signaling before making their maneuver.",
+      "road_event_answer": "A car at a roundabout failed to signal, nearly causing a collision with a cyclist.",
+      "distractor_answers": [
+        "A car and a two-wheeler dangerously attempted to overtake another vehicle on a hairpin bend.",
+        "A Nissan car ran a red light and collided with the side of a Suzuki truck.",
+        "A cab and a bus both performed unsafe overtaking maneuvers, nearly causing a head-on collision."
       ],
-      "overrides": {
-        "Exaggeration": {
-          "text": "How strongly does the caption use <b class='highlight-trait'>Exaggeration</b>?",
-          "options": [
-            "Not at all",
-            "Slightly",
-            "Moderately",
-            "Strongly",
-            "Very Strongly"
-          ]
-        },
-        "CallToAction": {
-          "text": "How strongly does the caption use a <b class='highlight-trait'>CallToAction</b>?",
-          "options": [
-            "Not at all",
-            "Subtly",
-            "Moderately",
-            "Strongly",
-            "Very Directly"
-          ]
-        },
-        "Rhetorical Question": {
-          "text": "How strongly does the caption use a <b class='highlight-trait'>Rhetorical Question</b>?",
-          "options": [
-            "Not at all",
-            "Subtly",
-            "Moderately",
-            "Strongly",
-            "Very Strongly"
-          ]
-        },
-        "Pop Culture References": {
-          "text": "How strongly does the caption use <b class='highlight-trait'>Pop Culture References</b>?",
-          "options": [
-            "Not at all",
-            "Subtly",
-            "Moderately",
-            "Strongly",
-            "Very Strongly"
-          ]
-        },
-        "Analogy": {
-          "text": "How strongly does the caption use an <b class='highlight-trait'>Analogy</b>?",
-          "options": [
-            "Not at all",
-            "Subtly",
-            "Moderately",
-            "Strongly",
-            "Very Strongly"
-          ]
-        },
-        "Metaphorical": {
-          "text": "How strongly does the caption use <b class='highlight-trait'>Metaphorical</b> language?",
-          "options": [
-            "Not at all",
-            "Subtly",
-            "Moderately",
-            "Strongly",
-            "Very Strongly"
-          ]
-        },
-        "Proverbial": {
-          "text": "How strongly does the caption use a <b class='highlight-trait'>Proverbial</b> saying?",
-          "options": [
-            "Not at all",
-            "Subtly",
-            "Moderately",
-            "Strongly",
-            "Very Strongly"
-          ]
-        },
-        "Understatement": {
-          "text": "How strongly does the caption use <b class='highlight-trait'>Understatement</b>?",
-          "options": [
-            "Not at all",
-            "Subtly",
-            "Moderately",
-            "Strongly",
-            "Very Strongly"
-          ]
-        }
-      }
+      "caption": "Guess I'll use my psychic powers, since that turn signal is clearly too complicated for you.",
+      "category": "tone",
+      "options": ["Observant", "Sarcastic", "Amusing", "Critical"],
+      "correct_answer": "Sarcastic",
+      "explanation": "The phrase \"...since that turn signal is clearly too complicated for you\" displays sarcasm by ironically stating the opposite of what is meant to criticize the driver's simple mistake.",
+      "question_type": "single"
     },
     {
-      "id": "overall_relevance",
-      "text": "How relevant are the tone and style for the given video?"
+      "sample_id": "identify_002",
+      "video_path": "media/v_1749410676656030046_xdazf_eJ7vCQl2YJ.mp4",
+      "video_summary": "A dashcam video from India captured a near-miss incident involving unsafe overtaking on a hairpin bend. A car and a two-wheeler were attempting to overtake on the bend, while the dashcam vehicle was driving normally. The primary reason for the near-miss was the unsafe overtaking maneuver. This event involved traffic rule violations including unsafe overtaking and potentially crossing solid lane markings. The incident could have been prevented if the car and two-wheeler drivers had refrained from overtaking on the hairpin bend and followed proper road safety guidelines.",
+      "road_event_answer": "A car and a two-wheeler dangerously attempted to overtake another vehicle on a hairpin bend.",
+      "distractor_answers": [
+        "A car at a roundabout failed to signal, nearly causing a collision with a cyclist.",
+        "A Mercedes dangerously passed a Tesla with very little space, nearly causing a collision.",
+        "A Nissan car ran a red light and collided with the side of a Suzuki truck."
+      ],
+      "caption": "Today I saw a car and two-wheeler attempt unsafe overtaking on a hairpin bend, nearly resulting in a crash. Please remember, overtaking on sharp curves puts lives at risk. Let’s look out for one another.",
+      "category": "writing style",
+      "options": ["Conversational", "Exaggeration", "Advisory", "Judgmental"],
+      "correct_answer": "Advisory",
+      "explanation": "The phrase \"Please remember, overtaking on sharp curves puts lives at risk\" highlights an advisory style by directly giving a warning and advice to other drivers.",
+      "question_type": "single"
     },
     {
-      "id": "factual_consistency",
-      "text": "How factually accurate is the caption (refer to video and summary)?"
-    },
-    {
-      "id": "usefulness",
-      "text": "How useful would this caption be for {}?"
-    },
-    {
-      "id": "human_likeness",
-      "text": "How human-like does this caption sound?"
+      "sample_id": "identify_003",
+      "video_path": "media/v_1696360086518776040_DStI4BjOrtDhkLua.mp4",
+      "video_summary": "A dashcam captured a near-miss incident during sunset in the United States, involving a Tesla and a Mercedes. The Mercedes performed an extremely close pass by the Tesla, nearly causing a collision. This dangerous driving behavior, potentially stemming from aggressive driving or impatience, constitutes reckless driving and a potentially unsafe lane change. The incident could have been avoided if the Mercedes driver had maintained a safe distance and passed with caution.",
+      "road_event_answer": "A Mercedes dangerously passed a Tesla with very little space, nearly causing a collision.",
+      "distractor_answers": [
+        "A car at a roundabout failed to signal, nearly causing a collision with a cyclist.",
+        "A car and a two-wheeler dangerously attempted to overtake another vehicle on a hairpin bend.",
+        "A cab and a bus both performed unsafe overtaking maneuvers, nearly causing a head-on collision."
+      ],
+      "caption": "So apparently, sunset is when Mercedes drivers test just how close they can get to my Tesla. Smooth move, @TeslaRoadWatch.",
+      "category": "tone",
+      "options": ["Critical", "Appreciative", "Sarcastic", "Considerate"],
+      "correct_answer": ["Critical", "Sarcastic"],
+      "explanation": "The phrase \"Smooth move\" displays sarcasm by ironically praising a dangerous action to mock the driver. The phrase \"test just how close they can get\" highlights a critical tone by framing the driver's action as a reckless experiment.",
+      "question_type": "multi"
     }
   ],
-  "part3_questions": [
+  "Part 2: Tone Controllability Evaluation": [
     {
-      "id": "q1_tone",
-      "text": "Which caption sounds more {}?"
+      "sample_id": "intensity_001",
+      "video_path": "media/v_770719942027145220__IBpd70dJt7nNSop.mp4",
+      "video_summary": "A dangerous driving near-miss incident was captured by a Cycliq Fly6 bike-mounted camera in the United Kingdom, specifically at the Five Ways island near Honiley and Shrewley. The key event involved a vehicle, likely a car, performing a maneuver at a roundabout without proper indication, nearly causing a collision with a cyclist. The driver was potentially unaware of the cyclist and the potential danger. This incident constituted a traffic rule violation due to the failure to use proper indicators at a roundabout and could have been prevented if the driver had used appropriate signaling before making their maneuver.",
+      "road_event_answer": "A car at a roundabout failed to signal, nearly causing a collision with a cyclist.",
+      "distractor_answers": [
+        "A car and a two-wheeler dangerously attempted to overtake another vehicle on a hairpin bend.",
+        "A Nissan car ran a red light and collided with the side of a Suzuki truck.",
+        "A cab and a bus both performed unsafe overtaking maneuvers, nearly causing a head-on collision."
+      ],
+      "caption_A": "That wasn't a very smart move by the driver.",
+      "caption_B": "It takes a special kind of genius to make a move that stupid.",
+      "tone_to_compare": "Sarcastic",
+      "category": "Tone",
+      "comparison_type": "increased",
+      "options": ["Yes", "No"],
+      "correct_answer": "Yes",
+      "explanation": "The phrase \"special kind of genius\" in Caption B displays a much stronger sarcastic tone than the milder phrase \"wasn't a very smart move\" in Caption A."
     },
     {
-      "id": "q2_style",
-      "default_text": "Which caption's style is more {}?",
-      "overrides": {
-        "Exaggeration": {
-          "text": "Which caption uses <b class='highlight-trait'>Exaggeration</b> more strongly?"
-        },
-        "CallToAction": {
-          "text": "Which caption uses a <b class='highlight-trait'>CallToAction</b> more strongly/directly?"
-        },
-        "Rhetorical Question": {
-          "text": "Which caption uses a <b class='highlight-trait'>Rhetorical Question</b> more strongly?"
-        },
-        "Pop Culture References": {
-          "text": "Which caption uses a <b class='highlight-trait'>Pop Culture Reference</b> more strongly?"
-        },
-        "Analogy": {
-          "text": "Which caption uses an <b class='highlight-trait'>Analogy</b> more strongly?"
-        },
-        "Metaphorical": {
-          "text": "Which caption uses <b class='highlight-trait'>Metaphorical</b> language more strongly?"
-        },
-        "Proverbial": {
-          "text": "Which caption uses a <b class='highlight-trait'>Proverbial</b> saying more strongly?"
-        },
-        "Understatement": {
-          "text": "Which caption uses <b class='highlight-trait'>Understatement</b> more strongly?"
-        }
-      }
-    },
-    {
-      "id": "q3_accuracy",
-      "text": "Which caption is more factually accurate based on the video summary?"
-    },
-    {
-      "id": "q4_preference",
-      "text": "Which caption sounds more human-like to you?"
+      "sample_id": "intensity_002",
+      "video_path": "media/v_988741606391009282_aG9gbwBWJLQVFXT_.mp4",
+      "video_summary": "A dashcam captured a daytime traffic accident in Japan where a Nissan Note ran a red light at an intersection and collided with the side of a Suzuki Carry light truck. The primary reason for the accident was the Nissan Note's red light violation. The Suzuki Carry sustained damage to its side from the impact, but there were no reported casualties, and its occupants were uninjured.",
+      "road_event_answer": "A Nissan car ran a red light and collided with the side of a Suzuki truck.",
+      "distractor_answers": [
+        "A car at a roundabout failed to signal, nearly causing a collision with a cyclist.",
+        "A Mercedes dangerously passed a Tesla with very little space, nearly causing a collision.",
+        "A car and a two-wheeler dangerously attempted to overtake another vehicle on a hairpin bend."
+      ],
+      "caption_A": "A crucial reminder for all drivers: Always stop at red lights to prevent collisions like this one.",
+      "caption_B": "Drivers should be more careful at intersections.",
+      "tone_to_compare": "Advisory",
+      "category": "Writing Style",
+      "comparison_type": "decreased",
+      "options": ["Yes", "No"],
+      "correct_answer": "Yes",
+      "explanation": "The phrase \"Always stop at red lights\" in Caption A is a strong, direct command, while the phrase \"should be more careful\" in Caption B is a much weaker, general suggestion."
     }
   ],
-  "part2_questions": {
-    "Tone": "Has the {} level {change_type} from Caption A to B?",
-    "Writing Style": "Has the {} strength {change_type} from Caption A to B?"
-  }
+  "Part 3: Caption Quality": [
+    {
+      "sample_id": "rating_001",
+      "video_path": "media/v_1692102872706765068_GjAx5c9hRZP-JBsr.mp4",
+      "video_summary": "A dashcam captured an instance of unsafe driving behavior in India during daytime, likely afternoon. The key road event was an unsafe overtaking attempt by a cab that nearly resulted in a head-on collision with an oncoming vehicle. The cab attempted to overtake on a curve with limited visibility, forcing it to brake and swerve to avoid the collision. A bus was also involved, performing an unsafe overtake. The traffic violations included unsafe overtaking by both the cab and the bus, and the cab's overtaking on a curve with limited visibility.",
+      "road_event_answer": "A cab and a bus both performed unsafe overtaking maneuvers, nearly causing a head-on collision.",
+      "distractor_answers": [
+        "A car at a roundabout failed to signal, nearly causing a collision with a cyclist.",
+        "A Mercedes dangerously passed a Tesla with very little space, nearly causing a collision.",
+        "A Nissan car ran a red light and collided with the side of a Suzuki truck."
+      ],
+      "caption": "I witnessed a cab attempt a dangerous overtake on a blind curve, nearly leading to a head-on collision with an oncoming vehicle. A bus also overtook unsafely. Overtaking without clear visibility is extremely risky—please drive with caution and patience. #RoadSafety #DriveResponsibly",
+      "control_scores": {
+        "tone": { "Serious": "Strong"},
+        "writing_style": { "Advisory": "Very Strong"}
+      },
+      "application": "Public Safety Alert",
+      "questions": [
+        {
+          "question_text": "Is the caption factually accurate based on the video summary?",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "The caption phrases '...cab attempt a dangerous overtake...' and 'A bus also overtook unsafely' directly match the key events described in the video summary."
+        },
+        {
+          "question_text": "Is the caption useful for Public Safety Alert?",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "The caption's direct warning and safety advice make it highly useful as a Public Safety Alert, aiming to inform the public about road dangers."
+        }
+      ]
+    }
+  ]
 }

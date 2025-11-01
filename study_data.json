@@ -190,28 +190,29 @@
   ],
   "part3_comparisons": [
     {
-      "comparison_id": "comp_005",
-      "video_id": "video_1798581666879086946",
-      "video_path": "media/v_1798581666879086946_iMCA3kCEctYBK5Uc.mp4",
-      "video_summary": "The video, captured by multiple cameras including surveillance and indoor types, depicts key road events involving unsafe driving behavior, improper U-turns, and various traffic violations in Hyderabad, India, specifically in areas like Gachibowli and Abdullahpurmet. These events occurred during both daytime and nighttime. The road entities involved include cars, motorcycles, buses, and pedestrians, interacting with U-turns, traffic signals, road dividers, and zebra crossings. Actions observed include improper U-turns, overtaking, speeding, wrong-side driving, and red light jumping. The depicted traffic rule violations encompass improper U-turns, wrong-side driving, red light jumping, speeding, lane discipline violations, and helmet rule violations.",
-      "road_event_answer": "A compilation shows multiple traffic violations in Hyderabad, including improper U-turns, speeding, and red light jumping.",
+      "comparison_id": "comp_002",
+      "video_id": "video_1695748178056974456",
+      "video_path": "media/v_1695748178056974456_FxGj0jW1c_4xuTXE.mp4",
+      "video_summary": "A vehicle-mounted camera, providing a driver's perspective, captured a road event in Japan during daytime. The key event depicted dangerous driving behavior, specifically illegal turns and lane changes at intersections. A beginner driver's car (possibly a Wagon R) and a yellow car (possibly a Vitz) were observed making illegal turns or lane changes at intersections, cutting across lanes inappropriately. Traffic rule violations included illegal lane changes, improper turns at intersections, and potentially running yellow lights, involving these vehicles, traffic lights, and other vehicles in traffic.",
+      "road_event_answer": "A beginner driver's car and a yellow car are seen making illegal turns/lane changes at intersections.",
       "distractor_answers": [
+        "A high-speed car crash on a highway results in a severely damaged vehicle, multiple fatalities, and injuries.",
         "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",
-        "A large truck performs a hazardous overtaking maneuver, ignoring oncoming traffic.",
-        "A motorcyclist, approaching at high speed, performs a tactical roll to avoid colliding with a turning truck."
+        "A compilation shows multiple traffic violations in Hyderabad, including improper U-turns, speeding, and red light jumping."
       ],
       "control_scores": {
         "tone": {
-          "Curious": "Very Strong",
-          "Questioning": "Strong"
+          "Angry": "Very Strong",
+          "Critical": "Strong"
         },
         "writing_style": {
-          "Conversational": "Strong"
+          "Conversational": "Strong",
+          "Rhetorical Question": "Strong"
         }
       },
-      "caption_A": "Have you ever seen roads like this in Gachibowli or Abdullahpurmet? \ud83d\udea6 What goes on here? #Hyderabad",
-      "caption_B": "Have you ever seen roads like this in Gachibowli or Abdullahpurmet? \ud83d\udea6 What goes on here? #Hyderabad",
-      "application": "Community Awareness Post"
+      "caption_A": "Is following basic traffic rules too much to ask? \ud83e\udd28 #fail",
+      "caption_B": "Is following basic traffic rules too much to ask? \ud83e\udd28 #fail",
+      "application": "Reaction Post"
     },
     {
       "comparison_id": "comp_006",

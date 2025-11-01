@@ -197,11 +197,10 @@
       ],
       "control_scores": {
         "tone": {
-          "Angry": "Very Strong",
           "Critical": "Strong"
         },
         "writing_style": {
-          "Conversational": "Strong",
+          "Judgmental": "Strong",
           "Rhetorical Question": "Strong"
         }
       },

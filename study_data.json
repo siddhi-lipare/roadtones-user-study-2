@@ -13,7 +13,7 @@
       "captions": [
         {
           "caption_id": "video_1685698185946140672_caption1",
-          "text": "Near-miss in Cornwall, Ontario: semi-truck\u2019s unsafe lane change almost causes crash with another vehicle. \ud83d\ude9a #CanadaRoads",
+          "text": "Near-miss in Cornwall, Ontario: semi-truck’s unsafe lane change almost causes crash with another vehicle. 🚚 #CanadaRoads",
           "control_scores": {
             "tone": {
               "Serious": "Strong"
@@ -22,7 +22,7 @@
               "Factual": "Strong"
             }
           },
-          "application": "Public Safety Awareness"
+          "application": "Public Safety Alert"
         },
         {
           "caption_id": "video_1685698185946140672_caption2",
@@ -35,11 +35,11 @@
               "Conversational": "Strong"
             }
           },
-          "application": "Community Awareness Post"
+          "application": "Urban Traffic Observation"
         },
         {
           "caption_id": "video_1685698185946140672_caption3",
-          "text": "Semi-trailer trucks pulling moves like this\u2014unsafe lane changes, no signal, barely a glance\u2014almost as if mirrors are just for decoration. Near Cornwall, Ontario, another close call caught on dashcam. #RoadSafety #TruckAccidents",
+          "text": "Semi-trailer trucks pulling moves like this—unsafe lane changes, no signal, barely a glance—almost as if mirrors are just for decoration. Near Cornwall, Ontario, another close call caught on dashcam. #RoadSafety #TruckAccidents",
           "control_scores": {
             "tone": {
               "Critical": "Strong",
@@ -66,7 +66,7 @@
       "captions": [
         {
           "caption_id": "video_1774263154723451187_caption1",
-          "text": "I nearly got hit by a reckless right-turning driver who didn\u2019t even bother to yield. Some people never learn. #drivingfail",
+          "text": "I nearly got hit by a reckless right-turning driver who didn’t even bother to yield. Some people never learn. #drivingfail",
           "control_scores": {
             "tone": {
               "Critical": "Strong",
@@ -80,7 +80,7 @@
         },
         {
           "caption_id": "video_1774263154723451187_caption2",
-          "text": "Dashcam footage from Osaka captures a tense moment as a right-turning car fails to yield, narrowly missing the camera vehicle. Grateful this near-miss ended safely. \ud83d\ude97\ud83d\udca5 #RoadSafety #DashcamDrama",
+          "text": "Dashcam footage from Osaka captures a tense moment as a right-turning car fails to yield, narrowly missing the camera vehicle. Grateful this near-miss ended safely. 🚗💥 #RoadSafety #DashcamDrama",
           "control_scores": {
             "tone": {
               "Appreciative": "Strong",
@@ -90,11 +90,11 @@
               "Factual": "Very Strong"
             }
           },
-          "application": "Law Enforcement Reporting"
+          "application": "Public Safety Alert"
         },
         {
           "caption_id": "video_1774263154723451187_caption3",
-          "text": "Was I just supposed to guess that car was about to dart in front of me? Near-miss moments like this really make me wonder\u2026 \ud83d\ude97\ud83d\udca5 Anyone else get surprised by these moves? #RoadRage",
+          "text": "Was I just supposed to guess that car was about to dart in front of me? Near-miss moments like this really make me wonder… 🚗💥 Anyone else get surprised by these moves? #RoadRage",
           "control_scores": {
             "tone": {
               "Anxious": "Very Strong"
@@ -104,7 +104,7 @@
               "Conversational": "Very Strong"
             }
           },
-          "application": "Community Awareness Post"
+          "application": "Driver Behavior Monitoring"
         }
       ]
     }

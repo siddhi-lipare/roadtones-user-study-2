@@ -54,37 +54,22 @@
       ]
     },
     {
-      "video_id": "video_1774263154723451187",
-      "video_path": "media/v_1774263154723451187_QFMMJd8wYMEMl2r7.mp4",
-      "video_summary": "A daytime near-miss incident involving dangerous driving behavior was captured by a vehicle-mounted camera in Osaka, Japan. The key road event involved the camera vehicle and a right-turning vehicle. The right-turning vehicle made a sudden and dangerous right turn, nearly colliding with the camera vehicle. This maneuver was likely due to the driver of the right-turning vehicle not paying attention or being in a rush, resulting in a failure to yield right-of-way. The incident could have been avoided if the right-turning vehicle had waited for a clear opportunity to turn and checked for oncoming traffic.",
-      "road_event_answer": "A vehicle makes a sudden, dangerous right turn, failing to yield and nearly colliding with the camera vehicle.",
+      "video_id": "video_1746094819381035459",
+      "video_path": "media/v_1746094819381035459_eTAK76kBfZm7748G.mp4",
+      "video_summary": "A severe accident involving reckless driving and a traffic violation occurred during the daytime in Palghar, on the Boisar-Palghar road in Maharashtra, India. Captured by a CCTV camera, the key road event involved an auto-rickshaw and a pickup truck. The auto-rickshaw driver made a sudden U-turn without checking for oncoming traffic, leading to a collision with the pickup truck that was driving on the road. Traffic rule violations associated with this event include making an unsafe U-turn, failure to check for oncoming traffic, and reckless driving by the auto-rickshaw driver.",
+      "road_event_answer": "A reckless auto-rickshaw made an unsafe U-turn, colliding with a pickup truck in Palghar, Maharashtra.",
       "distractor_answers": [
-        "A motorcyclist performs high-speed wheelies on a busy road with other vehicles.",
-        "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",
-        "A driver on a highway at night has a near-miss after reacting quickly to an unexpected obstacle."
+        "Multiple vehicles run a red light and make illegal U-turns while pedestrians are crossing against their signal.",
+        "A motorcyclist performs a stunt by standing on the seat of their moving motorcycle.",
+        "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend."
       ],
       "captions": [
         {
-          "caption_id": "video_1774263154723451187_caption1",
-          "text": "I nearly got hit by a reckless right-turning driver who didn’t even bother to yield. Some people never learn. #drivingfail",
+          "caption_id": "video_1746094819381035459_caption1",
+          "text": "A serious accident on Boisar-Palghar road in Maharashtra as an auto-rickshaw’s sudden U-turn leads to collision.",
           "control_scores": {
             "tone": {
-              "Critical": "Strong",
-              "Assertive": "Strong"
-            },
-            "writing_style": {
-              "Judgmental": "Very Strong"
-            }
-          },
-          "application": "Law Enforcement Reporting"
-        },
-        {
-          "caption_id": "video_1774263154723451187_caption2",
-          "text": "Dashcam footage from Osaka captures a tense moment as a right-turning car fails to yield, narrowly missing the camera vehicle. Grateful this near-miss ended safely. 🚗💥 #RoadSafety #DashcamDrama",
-          "control_scores": {
-            "tone": {
-              "Appreciative": "Strong",
-              "Tense": "Strong"
+              "Serious": "Strong"
             },
             "writing_style": {
               "Factual": "Very Strong"
@@ -93,18 +78,31 @@
           "application": "Public Safety Alert"
         },
         {
-          "caption_id": "video_1774263154723451187_caption3",
-          "text": "Was I just supposed to guess that car was about to dart in front of me? Near-miss moments like this really make me wonder… 🚗💥 Anyone else get surprised by these moves? #RoadRage",
+          "caption_id": "video_1746094819381035459_caption2",
+          "text": "Did anyone else notice the sudden U-turn by the auto-rickshaw in Palghar that led to a crash?",
           "control_scores": {
             "tone": {
-              "Anxious": "Very Strong"
+              "Curious": "Very Strong"
             },
             "writing_style": {
-              "Rhetorical Question": "Strong",
-              "Conversational": "Very Strong"
+              "Rhetorical Question": "Very Strong"
             }
           },
-          "application": "Driver Behavior Monitoring"
+          "application": "Urban Traffic Observation"
+        },
+        {
+          "caption_id": "video_1746094819381035459_caption3",
+          "text": "A recent collision on Boisar-Palghar road highlights the dangers of making sudden U-turns without checking traffic. Is it worth risking safety for a shortcut? Let’s prioritize awareness and careful driving to prevent such accidents. Will you help make our roads safer? 🚦 #RoadSafety #DriveResponsibly",
+          "control_scores": {
+            "tone": {
+              "Caring": "Very Strong",
+              "Considerate": "Strong"
+            },
+            "writing_style": {
+              "CallToAction": "Strong"
+            }
+          },
+          "application": "Public Safety Alert"
         }
       ]
     }
@@ -112,19 +110,19 @@
   "part2_intensity_change": [
     {
       "change_id": "change_001",
-      "video_id": "video_1772082398257127647",
-      "video_path": "media/v_1772082398257127647_PAjmPcDqmPNuvb6p.mp4",
-      "video_summary": "A severe car accident, captured by multiple cameras, occurred in Brampton, Ontario, Canada. The key road event involved a dark-colored sports car that reportedly came flying over a fence at high speed, resulting in it being severely damaged and overturned with its front end crumpled and debris scattered. The driver and passenger of the sports car fled the scene, constituting a hit-and-run. A white Toyota Tacoma pickup truck was also involved, sustaining a detached front bumper. The incident took place near two-story brick residential houses and power lines. Bystanders were observed assessing the situation and offering assistance. The traffic violations associated with this event include speeding, reckless driving, and fleeing the scene of an accident.",
-      "road_event_answer": "A sports car crashed at high speed, and the occupants fled the scene.",
+      "video_id": "video_1733061652738978087",
+      "video_path": "media/v_1733061652738978087_5VYwlGdg-dFih8wt.mp4",
+      "video_summary": "A CCTV camera captured a motorcycle accident during the daytime in the RC Puram area of India. The key road event involved a motorcycle with two riders at a road intersection. The motorcycle was speeding and lost control at the intersection, resulting in both riders falling off and the motorcycle overturning. The primary reason for the accident was reckless driving and excessive speed, particularly by the rider in the blue shirt, with possible contributing factors including inexperience or thrill-seeking behavior. Traffic rule violations observed include speeding, reckless driving, not wearing helmets, and potentially underage driving. The accident could have been prevented by reducing speed, stopping at the intersection to check for oncoming traffic, and adhering to traffic rules.",
+      "road_event_answer": "A speeding motorcycle with two riders lost control at an intersection, causing both to fall and the bike to overturn.",
       "distractor_answers": [
         "An SUV dangerously cuts in front of a truck, forcing the truck to take evasive action.",
-        "A beginner driver's car and a yellow car are seen making illegal turns/lane changes at intersections.",
+        "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",
         "A large truck performs a hazardous overtaking maneuver, ignoring oncoming traffic."
       ],
-      "caption_A": "A car suddenly flips over, sending debris everywhere\u2014 so unsettling to watch. People rush away, unsure what just happened. \ud83d\ude97\ud83d\udca5 #Crash #RoadDrama",
-      "caption_B": "My heart races watching this\u2014out of nowhere, a car comes crashing over a fence, metal everywhere, people running. It\u2019s so overwhelming. #CarCrash \ud83d\ude30",
+      "caption_A": "Did anyone else see that wild motorcycle flip at RC Puram intersection this afternoon?",
+      "caption_B": "So did I just see a reckless motorcycle wipeout in RC Puram, or is daytime action a new trend?",
       "field_to_change": {
-        "tone": "Emotional"
+        "tone": "Sarcasm"
       },
       "change_type": "increased"
     },
@@ -132,10 +130,10 @@
       "change_id": "change_007",
       "video_id": "video_1290909686519091201",
       "video_path": "media/v_1290909686519091201_9vmNpHDC5937f9MW.mp4",
-      "video_summary": "A vehicle-mounted camera captured a near-miss incident at night on the M7 highway in Sydney, Australia. The key road event involved the driver's vehicle and possibly a stationary vehicle or unexpected obstacle on the road. The driver demonstrated quick reflexes to avoid a potential collision, motivated by self-preservation and the need for quick decision-making. The incident could have been prevented by maintaining a safe speed, increasing vigilance while driving at night, and being prepared for unexpected obstacles.",
+      "video_summary": "A vehicle-mounted camera captured a near-miss incident at night on the M7 highway in Sydney, Australia. The key road event involved the driver's vehicle and possibly a stationary vehicle or unexpected obstacle on the road. The driver demonstrated quick reflexes to avoid a potential collision. The incident could have been prevented by maintaining a safe speed, increasing vigilance while driving at night, and being prepared for unexpected obstacles.",
       "road_event_answer": "A driver on a highway at night has a near-miss after reacting quickly to an unexpected obstacle.",
       "distractor_answers": [
-        "A beginner driver's car and a yellow car are seen making illegal turns/lane changes at intersections.",
+        "A scooter rider opens the door of a car, causing a passing pedestrian to fall.",
         "A motorcyclist performs high-speed wheelies on a busy road with other vehicles.",
         "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend."
       ],
@@ -148,19 +146,19 @@
     },
     {
       "change_id": "change_004",
-      "video_id": "video_1614378859859939328",
-      "video_path": "media/v_1614378859859939328_VErVoLZl_Gr9In55.mp4",
-      "video_summary": "A dashcam video captured a key road event of reckless driving and dangerous lane changing at night in Toronto, Ontario, Canada, specifically on Highway 427 South near the Highway 407 exit. An SUV, identified as a Durango, performed a dangerous lane change by passing a truck on the left and then cutting sharply in front of it. The truck driver demonstrated good driving by successfully avoiding a collision. The SUV driver's actions are suspected to be due to impatience and possibly being in a rush after missing an exit. This incident involved traffic rule violations including reckless driving, illegal lane changing, and potentially speeding.",
-      "road_event_answer": "An SUV dangerously cuts in front of a truck, forcing the truck to take evasive action.",
+      "video_id": "video_1737587316758061441",
+      "video_path": "media/v_1737587316758061441_OlVOo29DllajCZ2Y.mp4",
+      "video_summary": "A dashcam captured an instance of unsafe driving behavior in Canada, near Exit 687 in Brockville, Ontario, on Highway 401. The key road event involved a truck driver performing an unsafe lane change, potentially cutting off or nearly colliding with another vehicle. This action constitutes traffic rule violations including unsafe lane change and potentially failure to check blind spots.",
+      "road_event_answer": "A truck on Highway 401 near Brockville, Ontario, made an unsafe lane change, nearly cutting off another vehicle.",
       "distractor_answers": [
         "A scooter rider opens the door of a car, causing a passing pedestrian to fall.",
         "A motorcyclist performs high-speed wheelies on a busy road with other vehicles.",
         "A motorcyclist rides recklessly, weaving between vehicles, riding no-handed, and hiding their license plate."
       ],
-      "caption_A": "Not sure what I just saw tonight, but I\u2019m honestly a little shaken. #recklessdrivers",
-      "caption_B": "I witnessed wild driving late last night, October 17. #HighwayLife gets intense sometimes.",
+      "caption_A": "@Ontario511 Caution advised near Brockville, Ontario on Highway 401 🚚. Keep a safe distance and drive carefully. #roadsafety #OntarioTraffic",
+      "caption_B": "A truck made an unsafe lane change near Exit 687, Brockville, Ontario. @OPP_HSD, sharing for awareness. #Highway401 \ud83d\ude9a",
       "field_to_change": {
-        "tone": "Bewildered"
+        "tone": "Advisory"
       },
       "change_type": "decreased"
     },
@@ -185,57 +183,57 @@
   ],
   "part3_comparisons": [
     {
-      "comparison_id": "comp_002",
-      "video_id": "video_1695748178056974456",
-      "video_path": "media/v_1695748178056974456_FxGj0jW1c_4xuTXE.mp4",
-      "video_summary": "A vehicle-mounted camera, providing a driver's perspective, captured a road event in Japan during daytime. The key event depicted dangerous driving behavior, specifically illegal turns and lane changes at intersections. A beginner driver's car (possibly a Wagon R) and a yellow car (possibly a Vitz) were observed making illegal turns or lane changes at intersections, cutting across lanes inappropriately. Traffic rule violations included illegal lane changes, improper turns at intersections, and potentially running yellow lights, involving these vehicles, traffic lights, and other vehicles in traffic.",
-      "road_event_answer": "A beginner driver's car and a yellow car are seen making illegal turns/lane changes at intersections.",
-      "distractor_answers": [
-        "A high-speed car crash on a highway results in a severely damaged vehicle, multiple fatalities, and injuries.",
-        "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",
-        "A compilation shows multiple traffic violations in Hyderabad, including improper U-turns, speeding, and red light jumping."
-      ],
-      "control_scores": {
-        "tone": {
-          "Critical": "Strong"
-        },
-        "writing_style": {
-          "Judgmental": "Strong",
-          "Rhetorical Question": "Strong"
-        }
-      },
-      "caption_A": "Is following basic traffic rules too much to ask? \ud83e\udd28 #fail",
-      "caption_B": "How hard is it to stop at a red light? \ud83d\udea6 #TrafficViolation"
-    },
-    {
       "comparison_id": "comp_006",
-      "video_id": "video_1724793343144837589",
-      "video_path": "media/v_1724793343144837589_-Jno5Mt1kFvHGx4N.mp4",
-      "video_summary": "A near-miss incident occurred at night near Marathahalli, India, captured by a 4K dashcam. A car, driving straight with the right of way, was almost collided with by a motorcycle. The motorcyclist failed to yield to the car, stopping at the last moment, which constituted a traffic rule violation. It was suggested that the biker might have been rushing to meet delivery targets. The incident could have been avoided if the biker had yielded and both parties had practiced defensive driving.",
-      "road_event_answer": "A motorcyclist fails to yield and nearly collides with a car at an intersection.",
+      "video_id": "video_1734309016925344044",
+      "video_path": "media/v_1734309016925344044_qT15mxIcC4USKy9e.mp4",
+      "video_summary": "A vehicle-mounted camera captured a key road event during the day in Canada, near Vaughan, on Highway 610 North of Highway 400. The event involved a stationary vehicle engulfed in bright orange flames and producing thick black smoke on the highway. Other vehicles on the busy highway were observed slowing down and changing lanes to avoid the incident, leading to traffic congestion.",
+      "road_event_answer": "A vehicle caught fire on Highway near Canada causing heavy smoke and traffic congestion.",
       "distractor_answers": [
-        "A high-speed car crash on a highway results in a severely damaged vehicle, multiple fatalities, and injuries.",
+        "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",
         "A large truck performs a hazardous overtaking maneuver, ignoring oncoming traffic.",
         "A motorcyclist performs a stunt by standing on the seat of their moving motorcycle."
       ],
       "control_scores": {
         "tone": {
-          "Humorous": "Very Strong",
-          "Sarcastic": "Strong"
+          "Serious": "Very Strong",
+          "Calm": "Strong"
         },
         "writing_style": {
-          "Pop Culture References": "Strong"
+          "Factual": "Strong"
         }
       },
-      "caption_A": "@BlrCityPolice Marathahalli got its own Fast & Furious last night\u2014biker\u2019s need for speed almost turned car into a bumper sticker.",
-      "caption_B": "@TrafficPoliceIn Mumbai\u2019s roads tonight: where speed demons and reckless riders play real-life Mario Kart. Speeding, wrong side, chaos everywhere!"
+      "caption_A": "Vehicle fire on Highway 610 north of Highway 400, Vaughan causes traffic delays. 🚗🔥 #Ontario",
+      "caption_B": "A car fire on Highway 400 near Highway 610 in Toronto. \ud83d\ude97\ud83d\udd25 #TorontoTraffic"
+    },
+    {
+      "comparison_id": "comp_002",
+      "video_id": "video_1801947948118610334",
+      "video_path": "media/v_1801947948118610334_GnuwF-EYCCmBjjo3.mp4",
+      "video_summary": "A dashcam or vehicle-mounted camera captured a near-miss incident involving dangerous driving behavior in Japan during the daytime in winter. A black van was driving steadily down the street when another vehicle, likely a car, suddenly emerged from a side road, nearly causing a collision. The driver of the emerging vehicle may have been inattentive, impatient, or misjudged the timing and distance, possibly only looking in one direction or misjudging the speed of the approaching vehicle. The incident could have been prevented if the driver emerging from the side road had properly stopped, looked both ways carefully, and waited for a safe gap in traffic before proceeding. Potential traffic violations include failure to yield right of way and possibly ignoring a stop sign or failing to make a complete stop before entering the main road.",
+      "road_event_answer": "A car nearly collided with a van after emerging carelessly from a side road, failing to yield during daytime winter traffic.",
+      "distractor_answers": [
+        "A high-speed car crash on a highway results in a severely damaged vehicle, multiple fatalities, and injuries.",
+        "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",
+        "A motorcyclist performs a stunt by standing on the seat of their moving motorcycle."
+      ],
+      "control_scores": {
+        "tone": {
+          "Appreciative": "Strong",
+          "Considerate": "Strong"
+        },
+        "writing_style": {
+          "Advisory": "Strong"
+        }
+      },
+      "caption_A": "Today my dashcam recorded a close call: a black van traveling calmly was almost hit by a car suddenly entering from a side road in winter daylight. It made me reflect on how quickly things can change on the road and appreciate attentive driving. Checking both ways really matters. Grateful everyone was safe. #RoadSafety #WinterDriving #Dashcam #NearMiss #TrafficAwareness",
+      "caption_B": "Today\u2019s near-miss was a powerful reminder: even a small mistake can have big consequences. I was driving when a car suddenly pulled out from a driveway without checking, and I had to react quickly to avoid a collision. Grateful I managed to steer clear, but it\u2019s clear how much attention matters on snowy roads. Let\u2019s all stay alert. #RoadSafety #WinterDriving"
     },
     {
       "comparison_id": "comp_008",
       "video_id": "video_1666322163429679105",
       "video_path": "media/v_1666322163429679105_JVN7GXcomAkqW4_8.mp4",
-      "video_summary": "A massive multiple vehicle crash, involving numerous vehicles including large trucks, cars (such as white cars and a red hatchback), and a police car, occurred on the N12 highway near the Delmas off-ramp in South Africa. The incident took place during the morning or early hours, with poor visibility due to heavy fog identified as the primary cause. Vehicles were observed driving slowly, stopping, or parked, with some trucks illuminating their brake lights. People in high-visibility vests were present, inspecting or interacting with the vehicles. The event was captured by a vehicle-mounted camera, showing perspectives from inside a vehicle and focusing on side mirrors.",
-      "road_event_answer": "A massive multi-vehicle pileup on a highway caused by heavy fog.",
+      "video_summary": "A massive multiple vehicle crash, involving numerous vehicles including large trucks and cars occurred on the N12 highway near the Delmas off-ramp in South Africa. The incident took place during the morning or early hours, with poor visibility due to heavy fog identified as the primary cause. Vehicles were observed driving slowly, stopping, or parked, with some trucks illuminating their brake lights. People in high-visibility vests were present, inspecting or interacting with the vehicles. The event was captured by a vehicle-mounted camera, showing perspectives from inside a vehicle and focusing on side mirrors.",
+      "road_event_answer": "A massive multi-vehicle crash on a highway caused by heavy fog.",
       "distractor_answers": [
         "Multiple vehicles run a red light and make illegal U-turns while pedestrians are crossing against their signal.",
         "A car and a two-wheeler dangerously attempt to overtake on a hairpin bend.",

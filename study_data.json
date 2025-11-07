@@ -158,7 +158,7 @@
       "caption_A": "@Ontario511 Caution advised near Brockville, Ontario on Highway 401 🚚. Keep a safe distance and drive carefully. #roadsafety #OntarioTraffic",
       "caption_B": "A truck made an unsafe lane change near Exit 687, Brockville, Ontario. @OPP_HSD, sharing for awareness. #Highway401 \ud83d\ude9a",
       "field_to_change": {
-        "tone": "Advisory"
+        "writing_style": "Advisory"
       },
       "change_type": "decreased"
     },
